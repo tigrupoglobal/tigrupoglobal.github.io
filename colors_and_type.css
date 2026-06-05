@@ -1,0 +1,361 @@
+/* =====================================================================
+   Grupo Global — Colors & Type
+   Liquid Glass revamp anchored on the legacy brand palette.
+   ===================================================================== */
+
+/* ---------- Webfonts ---------- */
+/* Montserrat is the primary typeface inherited from the legacy site.
+   Inter is reserved for UI / dense data surfaces where Montserrat is
+   too geometric. Fraunces is loaded ONLY for the editorial display H1
+   accents — never set as default. */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* =================================================================
+     COLOR — Brand
+     The brand color from the original site is rgb(66,123,202) = #427BCA.
+     We keep this exact hue as the spine of the system and extend it
+     into a deep-navy ground (for "liquid glass on dark") plus a soft
+     ice-blue tint (for "liquid glass on light"). White is the third
+     pillar — it carries the wordmark.
+     ================================================================= */
+
+  /* The logo files supplied by the client use these exact colors —
+     this is the TRUE brand palette. The site-CSS blue (#427BCA) lives
+     on as --brand-blue-link for legacy link/CTA roles. */
+  --brand-navy:        #00175F;          /* LOGO navy — primary brand    */
+  --brand-navy-deep:   #00162F;          /* PWA tile background          */
+  --brand-blue:        #1554B8;          /* LOGO highlight blue          */
+  --brand-blue-link:   #427BCA;          /* legacy site link blue        */
+  --brand-blue-600:    #103F8C;          /* pressed / hover-dark         */
+  --brand-blue-400:    #4A7CCB;          /* hover-light                  */
+  --brand-blue-300:    #8FAEDF;          /* tint                         */
+  --brand-blue-200:    #C0D2EE;          /* surface tint                 */
+  --brand-blue-100:    #E4ECF8;          /* faintest tint                */
+
+  /* Canvas / ground tokens used for the dark-glass theme               */
+  --brand-navy-800:    #061F4C;          /* one step up from logo navy   */
+  --brand-navy-700:    #0E2B66;          /* card under dark glass        */
+  --brand-navy-600:    #1A3D80;          /* hairline on dark             */
+  --brand-gray:        #414141;          /* "Grupo" word gray            */
+
+  --brand-cyan:        #5CC8FF;          /* refraction highlight         */
+  --brand-violet:      #7A6CFF;          /* refraction highlight #2      */
+  --brand-mint:        #7BE0C8;          /* accent (success, growth)     */
+  --brand-amber:       #FFB85C;          /* accent (warning, attention)  */
+
+  --white:             #FFFFFF;
+  --ink-100:           #F5F7FB;          /* near-white surface           */
+  --ink-200:           #E6EAF2;          /* light hairline               */
+  --ink-300:           #C7CEDB;          /* muted on light               */
+  --ink-500:           #6B7488;          /* body muted                   */
+  --ink-700:           #2A3447;          /* body strong                  */
+  --ink-900:           #00162F;          /* same as navy-deep            */
+
+  /* Faintest brand-blue wash — subtle CTA / nav hovers on light        */
+  --brand-blue-50:     #F3F7FC;
+
+  /* -----------------------------------------------------------------
+     LIGHT-UI surfaces & text
+     The marketing site (ui_kits/website) runs a white theme. These are
+     its exact surface, hairline and text values — kept here so the
+     entire palette has ONE source of truth (global.css only aliases).
+     ----------------------------------------------------------------- */
+  --surface-100:       #F5F7FB;          /* page background tint         */
+  --surface-200:       #EDF1F8;          /* raised / inset surface tint  */
+  --hairline-100:      #E2E8F2;          /* divider on light             */
+  --hairline-200:      #CCD6E6;          /* stronger divider on light    */
+  --text-strong:       #14213D;          /* body heading text on light   */
+  --text-medium:       #3C4763;          /* secondary text on light      */
+  --text-soft:         #6A7591;          /* muted / meta text on light   */
+
+  /* =================================================================
+     COLOR — Semantic foreground / background
+     Two themes share these names: the default page is DARK GLASS
+     (navy ground), with a LIGHT GLASS surface override available
+     via [data-surface="light"].
+     ================================================================= */
+  --bg:                var(--brand-navy-deep);   /* canvas — PWA tile  */
+  --bg-elevated:       var(--brand-navy);         /* one step up        */
+  --fg1:               var(--white);             /* primary text         */
+  --fg2:               rgba(255,255,255,0.78);   /* secondary text       */
+  --fg3:               rgba(255,255,255,0.56);   /* tertiary / meta      */
+  --fg4:               rgba(255,255,255,0.32);   /* placeholder / dim    */
+  --hairline:          rgba(255,255,255,0.14);   /* divider on dark      */
+  --hairline-strong:   rgba(255,255,255,0.22);
+
+  --accent:            var(--brand-blue);
+  --accent-fg:         var(--white);
+  --link:              var(--brand-cyan);
+
+  --success:           var(--brand-mint);
+  --warning:           var(--brand-amber);
+  --danger:            #FF6B6B;
+
+  /* =================================================================
+     COLOR — Liquid glass tokens
+     The "liquid glass" effect is built from a translucent fill + a
+     backdrop blur + a top inner highlight + a soft drop shadow.
+     These tokens make the recipe reusable.
+     ================================================================= */
+  --glass-fill:        rgba(255,255,255,0.08);
+  --glass-fill-strong: rgba(255,255,255,0.14);
+  --glass-fill-soft:   rgba(255,255,255,0.04);
+  --glass-stroke:      rgba(255,255,255,0.18);
+  --glass-stroke-soft: rgba(255,255,255,0.10);
+  --glass-highlight:   rgba(255,255,255,0.55); /* top sheen             */
+  --glass-blur:        20px;
+  --glass-blur-lg:     40px;
+  --glass-blur-sm:     10px;
+
+  /* Refraction gradient — sits behind glass cards, picks up brand hues.
+     Uses the bright logo blue (#1554B8) as the anchor + cyan/violet
+     highlights for visual interest without straying from brand. */
+  --refraction:
+    radial-gradient(60% 60% at 20% 10%, rgba(92,200,255,0.30), transparent 70%),
+    radial-gradient(50% 50% at 90% 30%, rgba(122,108,255,0.28), transparent 70%),
+    radial-gradient(70% 70% at 50% 110%, rgba(21,84,184,0.55), transparent 70%);
+
+  /* =================================================================
+     TYPE — Families
+     ================================================================= */
+  --font-sans:    "Montserrat", "Montserrat Fallback", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-ui:      "Inter", "Montserrat", system-ui, sans-serif;
+  --font-mono:    ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* =================================================================
+     TYPE — Scale (clamp() so it survives layout breakpoints)
+     ================================================================= */
+  --fs-display:   clamp(56px, 7vw, 96px);   /* hero H1                  */
+  --fs-h1:        clamp(40px, 4.5vw, 64px);
+  --fs-h2:        clamp(30px, 3vw, 44px);
+  --fs-h3:        clamp(22px, 2vw, 28px);
+  --fs-h4:        18px;
+  --fs-body-lg:   18px;
+  --fs-body:      16px;
+  --fs-body-sm:   14px;
+  --fs-caption:   12px;
+  --fs-overline:  11px;
+
+  /* =================================================================
+     TYPE — Weights, leading, tracking
+     ================================================================= */
+  --fw-light:     300;
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+  --fw-heavy:     800;
+
+  --lh-tight:     1.05;
+  --lh-snug:      1.2;
+  --lh-normal:    1.5;
+  --lh-loose:     1.7;
+
+  --tr-tight:     -0.03em;
+  --tr-snug:      -0.015em;
+  --tr-normal:    0;
+  --tr-wide:      0.04em;
+  --tr-overline:  0.18em;
+
+  /* =================================================================
+     RADII
+     Liquid glass leans on generous, organic rounding. Pills for
+     interactive elements; large radii for surfaces.
+     ================================================================= */
+  --radius-xs:    6px;
+  --radius-sm:    10px;
+  --radius-md:    16px;
+  --radius-lg:    24px;
+  --radius-xl:    32px;
+  --radius-2xl:   44px;
+  --radius-pill:  999px;
+
+  /* =================================================================
+     SPACING — 4px base scale
+     ================================================================= */
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  20px;
+  --s-6:  24px;
+  --s-8:  32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-20: 80px;
+  --s-24: 96px;
+  --s-32: 128px;
+
+  /* =================================================================
+     SHADOWS — Glass elevation
+     Glass shadows are LARGER and SOFTER than typical UI shadows so the
+     refraction beneath reads. We layer a near shadow + a far shadow.
+     ================================================================= */
+  --elev-1:
+    0 1px 0 rgba(255,255,255,0.06) inset,
+    0 4px 14px rgba(7, 15, 30, 0.30);
+  --elev-2:
+    0 1px 0 rgba(255,255,255,0.10) inset,
+    0 10px 30px rgba(7, 15, 30, 0.35),
+    0 2px 6px rgba(7, 15, 30, 0.20);
+  --elev-3:
+    0 1px 0 rgba(255,255,255,0.14) inset,
+    0 24px 60px rgba(7, 15, 30, 0.45),
+    0 6px 14px rgba(7, 15, 30, 0.25);
+  --elev-glow:
+    0 0 0 1px rgba(255,255,255,0.10) inset,
+    0 0 40px rgba(92,200,255,0.25),
+    0 0 80px rgba(66,123,202,0.20);
+
+  /* =================================================================
+     MOTION
+     ================================================================= */
+  --ease-out:     cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out:  cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:     140ms;
+  --dur-base:     240ms;
+  --dur-slow:     420ms;
+  --dur-glass:    600ms;
+}
+
+/* =====================================================================
+   LIGHT SURFACE OVERRIDE
+   Apply [data-surface="light"] to a section/page to swap to the
+   light glass palette (white-tinted ground, dark text).
+   ===================================================================== */
+[data-surface="light"] {
+  --bg:                var(--ink-100);
+  --bg-elevated:       var(--white);
+  --fg1:               var(--ink-900);
+  --fg2:               var(--ink-700);
+  --fg3:               var(--ink-500);
+  --fg4:               var(--ink-300);
+  --hairline:          rgba(11,27,51,0.10);
+  --hairline-strong:   rgba(11,27,51,0.18);
+
+  --glass-fill:        rgba(255,255,255,0.55);
+  --glass-fill-strong: rgba(255,255,255,0.75);
+  --glass-fill-soft:   rgba(255,255,255,0.35);
+  --glass-stroke:      rgba(255,255,255,0.85);
+  --glass-stroke-soft: rgba(255,255,255,0.55);
+  --glass-highlight:   rgba(255,255,255,0.95);
+}
+
+/* =====================================================================
+   SEMANTIC TYPE RULES
+   These are the canonical styles. Use them by tag (h1, h2, body) OR by
+   class (.t-display, .t-h1) so JSX components can opt in.
+   ===================================================================== */
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg1);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  font-weight: var(--fw-regular);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.t-display, h1.display {
+  font-family: var(--font-sans);
+  font-size: var(--fs-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-tight);
+  font-weight: var(--fw-heavy);
+  text-wrap: balance;
+}
+
+h1, .t-h1 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-tight);
+  font-weight: var(--fw-bold);
+  text-wrap: balance;
+  margin: 0;
+}
+
+h2, .t-h2 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tr-snug);
+  font-weight: var(--fw-bold);
+  text-wrap: balance;
+  margin: 0;
+}
+
+h3, .t-h3 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tr-snug);
+  font-weight: var(--fw-semibold);
+  margin: 0;
+}
+
+h4, .t-h4 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-snug);
+  font-weight: var(--fw-semibold);
+  margin: 0;
+}
+
+p, .t-body {
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--fg2);
+  text-wrap: pretty;
+  margin: 0;
+}
+
+.t-body-lg  { font-size: var(--fs-body-lg); line-height: var(--lh-normal); color: var(--fg2); }
+.t-body-sm  { font-size: var(--fs-body-sm); line-height: var(--lh-normal); color: var(--fg2); }
+.t-caption  { font-size: var(--fs-caption); line-height: var(--lh-normal); color: var(--fg3); }
+.t-overline {
+  font-size: var(--fs-overline);
+  letter-spacing: var(--tr-overline);
+  text-transform: uppercase;
+  color: var(--fg3);
+  font-weight: var(--fw-semibold);
+}
+
+code, .t-mono {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+/* =====================================================================
+   GLASS RECIPE — use as a building block on any surface.
+   ===================================================================== */
+.glass {
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-stroke);
+  backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(140%);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elev-2);
+  position: relative;
+  overflow: hidden;
+}
+.glass::before {
+  /* Top edge highlight that sells the "glass" reading. */
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-highlight), transparent);
+  opacity: 0.6;
+  pointer-events: none;
+}
+.glass-strong { background: var(--glass-fill-strong); }
+.glass-soft   { background: var(--glass-fill-soft);   }
+.glass-lg     { backdrop-filter: blur(var(--glass-blur-lg)) saturate(140%);
+                -webkit-backdrop-filter: blur(var(--glass-blur-lg)) saturate(140%); }

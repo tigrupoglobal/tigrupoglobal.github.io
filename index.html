@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grupo Global Serviços — Prezando pela excelência</title>
+  <meta name="description" content="Grupo Global Serviços — há mais de 20 anos prezando pela excelência. Serviços para os segmentos público e privado, com presença nacional em 9 estados.">
+  <link rel="icon" type="image/svg+xml" href="assets/grupo-global-pwa-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="colors_and_type.css">
+  <link rel="stylesheet" href="./global.css">
+</head>
+<body>
+
+  <!-- ============ TOP UTILITY BAR ============ -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__group">
+        <a href="tel:+551128984712" aria-label="Telefone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg>
+          (11) 2898-4712
+        </a>
+        <a href="mailto:atendimento@grupoglobal.org" aria-label="E-mail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          atendimento@grupoglobal.org
+        </a>
+      </div>
+      <div class="topbar__group">
+        <span class="ti topbar__tag">Gerando ideias, aprimorando soluções</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#topo" class="brand" aria-label="Grupo Global — início">
+        <img src="assets/grupo-global-logo-real.png" alt="Grupo Global Serviços" width="993" height="413">
+      </a>
+
+      <nav class="mainnav" aria-label="Principal">
+        <div class="mainnav__item"><a class="mainnav__link active" href="#topo">Início</a></div>
+        <div class="mainnav__item">
+          <a class="mainnav__link" href="#sobre">Sobre Nós
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="submenu">
+            <a href="#sobre"><span class="dot"></span>Missão, visão e valores</a>
+            <a href="#integridade"><span class="dot"></span>Canal de denúncia</a>
+          </div>
+        </div>
+        <div class="mainnav__item"><a class="mainnav__link" href="#integridade">Integridade</a></div>
+        <div class="mainnav__item">
+          <a class="mainnav__link" href="#negocios">Negócios
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="submenu">
+            <a href="#negocios"><span class="dot"></span>Nossos serviços</a>
+            <a href="#contato"><span class="dot"></span>Solicite uma proposta</a>
+          </div>
+        </div>
+        <div class="mainnav__item">
+          <a class="mainnav__link" href="#pessoas">Pessoas
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="submenu">
+            <a href="#pessoas"><span class="dot"></span>Recursos humanos</a>
+            <a href="#pessoas"><span class="dot"></span>Envio de currículo</a>
+          </div>
+        </div>
+        <div class="mainnav__item"><a class="mainnav__link" href="#contato">Contato</a></div>
+      </nav>
+
+      <a href="#contato" class="btn btn-primary header__cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+        Peça um orçamento
+      </a>
+
+      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__head">
+      <img src="assets/grupo-global-logo-real.png" alt="Grupo Global">
+      <button class="drawer__close" id="drawerClose" aria-label="Fechar menu">&times;</button>
+    </div>
+    <a href="#topo">Início</a>
+    <a href="#sobre">Sobre Nós</a>
+    <a href="#sobre" class="sub">Missão, visão e valores</a>
+    <a href="#integridade">Integridade</a>
+    <a href="#negocios">Negócios</a>
+    <a href="#negocios" class="sub">Nossos serviços</a>
+    <a href="#pessoas">Pessoas</a>
+    <a href="#pessoas" class="sub">Envio de currículo</a>
+    <a href="#contato">Contato</a>
+    <a href="#contato" class="btn btn-primary btn-block">Peça um orçamento</a>
+  </aside>
+
+  <main id="topo">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__copy reveal">
+          <span class="eyebrow-line hero__eyebrow">Há mais de 20 anos · Brasil</span>
+          <h1>Prezando pela <em>excelência</em>.</h1>
+          <p class="hero__lead">
+            Nos destacamos pela excelência dos nossos serviços, pela competência da
+            nossa equipe e pela gestão voltada à satisfação dos nossos clientes —
+            compromisso social, respeito à diversidade e à preservação do meio ambiente.
+          </p>
+          <p class="hero__sub">Gerando ideias, aprimorando soluções.</p>
+          <div class="hero__actions">
+            <a href="#contato" class="btn btn-primary btn-lg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5"/></svg>
+              Peça já um orçamento
+            </a>
+            <a href="#sobre" class="btn btn-outline btn-lg">Conheça o Grupo Global</a>
+          </div>
+        </div>
+
+        <div class="hero__card reveal">
+          <div class="hero__card-quote">“Satisfação garantida em cada serviço que entregamos.”</div>
+          <div class="hero__card-grid">
+            <div class="hero__stat"><div class="n">20<span>+</span></div><div class="l">anos de atuação</div></div>
+            <div class="hero__stat"><div class="n">9</div><div class="l">estados atendidos</div></div>
+          </div>
+          <div class="hero__card-states">
+            <span class="statechip">AL</span><span class="statechip">BA</span><span class="statechip">DF</span>
+            <span class="statechip">GO</span><span class="statechip">MA</span><span class="statechip">MG</span>
+            <span class="statechip">PI</span><span class="statechip">RJ</span><span class="statechip">SP</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST STRIP ============ -->
+    <section class="trust">
+      <div class="container trust__inner">
+        <div class="trust__item reveal"><div class="trust__n">20<span>+</span></div><div class="trust__l">anos em atividade</div></div>
+        <div class="trust__item reveal"><div class="trust__n">9</div><div class="trust__l">estados de presença</div></div>
+        <div class="trust__item reveal"><div class="trust__n">2</div><div class="trust__l">setores: público &amp; privado</div></div>
+        <div class="trust__item reveal"><div class="trust__n">100<span>%</span></div><div class="trust__l">foco no cliente</div></div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE NÓS ============ -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__media reveal" aria-hidden="true">
+            <svg width="100%" height="100%" viewBox="0 0 600 450" preserveAspectRatio="xMidYMid slice" style="background:#EDF1F8">
+              <defs>
+                <pattern id="dgrid" width="34" height="34" patternUnits="userSpaceOnUse">
+                  <path d="M34 0H0V34" fill="none" stroke="#D6E0F0" stroke-width="1"/>
+                </pattern>
+              </defs>
+              <rect width="600" height="450" fill="url(#dgrid)"/>
+              <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="ui-monospace,monospace" font-size="15" fill="#9CB0CF">[ foto institucional · equipe Grupo Global ]</text>
+            </svg>
+          </div>
+          <div class="about__copy reveal">
+            <span class="eyebrow-line">Sobre nós</span>
+            <h2 style="margin-top:18px">Uma empresa construída sobre confiança e resultado.</h2>
+            <p>
+              Há mais de duas décadas o Grupo Global atua com soluções em serviços para
+              os segmentos público e privado. Nossa trajetória é marcada pela excelência
+              operacional, pela competência da equipe e por uma gestão comprometida com a
+              satisfação de cada cliente.
+            </p>
+            <p>
+              Acreditamos que a diversidade é potencial para qualificação e crescimento.
+              Levamos para todo o território nacional o mesmo padrão de qualidade,
+              responsabilidade social e respeito ao meio ambiente.
+            </p>
+            <a href="#negocios" class="btn btn-navy" style="margin-top:14px">Nossos serviços</a>
+          </div>
+        </div>
+
+        <!-- Missão / Visão / Valores -->
+        <div class="mvv">
+          <div class="mvv__card reveal">
+            <div class="mvv__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+            <h3>Missão</h3>
+            <p>Entregar serviços de excelência que gerem valor real para nossos clientes, com responsabilidade social e ética em cada operação.</p>
+          </div>
+          <div class="mvv__card reveal">
+            <div class="mvv__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <h3>Visão</h3>
+            <p>Ser referência nacional em serviços para os setores público e privado, reconhecida pela qualidade e pela credibilidade da nossa gestão.</p>
+          </div>
+          <div class="mvv__card reveal">
+            <div class="mvv__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 8 8 11 4.5-3 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h3>Valores</h3>
+            <p>Excelência, transparência, compromisso social, respeito à diversidade e cuidado com o meio ambiente orientam todas as nossas decisões.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEGÓCIOS / SERVIÇOS ============ -->
+    <section class="section section--surface" id="negocios">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="overline">Negócios</span>
+          <h2>Soluções completas para cada operação.</h2>
+          <p>Atendemos as mais diversas demandas com o mesmo padrão de excelência — do setor público ao privado, com estrutura local em cada região onde atuamos.</p>
+        </div>
+        <div class="services__grid">
+          <article class="svc reveal">
+            <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/><path d="M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg></div>
+            <h3>Facilities &amp; Serviços</h3>
+            <p>Gestão de serviços operacionais com equipes qualificadas, processos padronizados e foco total na continuidade do seu negócio.</p>
+            <a href="#contato" class="svc__link">Solicitar proposta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </article>
+          <article class="svc reveal">
+            <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg></div>
+            <h3>Gestão Terceirizada</h3>
+            <p>Terceirização de mão de obra e processos com governança, indicadores de desempenho e total conformidade trabalhista e fiscal.</p>
+            <a href="#contato" class="svc__link">Solicitar proposta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </article>
+          <article class="svc reveal">
+            <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3>Segmento Público</h3>
+            <p>Experiência consolidada em contratos públicos, com transparência, cumprimento de prazos e atendimento às exigências de cada edital.</p>
+            <a href="#contato" class="svc__link">Solicitar proposta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </article>
+          <article class="svc reveal">
+            <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+            <h3>Segmento Privado</h3>
+            <p>Soluções sob medida para empresas que buscam um parceiro confiável para operar serviços essenciais com qualidade e previsibilidade.</p>
+            <a href="#contato" class="svc__link">Solicitar proposta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </article>
+          <article class="svc reveal">
+            <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <h3>Operação &amp; Manutenção</h3>
+            <p>Disponibilidade e desempenho garantidos por times preparados, rotinas preventivas e resposta rápida quando você mais precisa.</p>
+            <a href="#contato" class="svc__link">Solicitar proposta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </article>
+          <article class="svc reveal">
+            <div class="svc__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>Compliance &amp; Integridade</h3>
+            <p>Programa de Integridade que assegura conformidade e transparência em processos públicos e privados, preservando nossa credibilidade.</p>
+            <a href="#integridade" class="svc__link">Saiba mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BRAND BAND (logo estampada) ============ -->
+    <section class="brandband">
+      <div class="container brandband__inner reveal">
+        <img class="brandband__logo" src="assets/grupo-global-logo-white.png" alt="Grupo Global Serviços">
+        <div class="brandband__tag">Gerando ideias, aprimorando soluções.</div>
+        <p class="brandband__sub">Serviços com qualidade, prezando pela excelência no atendimento e voltados à satisfação dos nossos clientes.</p>
+        <div class="brandband__actions">
+          <a href="#contato" class="btn btn-primary btn-lg">Peça já um orçamento</a>
+          <a href="#negocios" class="btn btn-ghost-light btn-lg">Veja todos os serviços</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PILARES ============ -->
+    <section class="section" id="pilares">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="overline">Nossos pilares</span>
+          <h2>O que nos sustenta há 20 anos.</h2>
+          <p>Quatro compromissos que definem a forma como trabalhamos e como nos relacionamos com clientes, colaboradores e a sociedade.</p>
+        </div>
+        <div class="pillars__grid">
+          <article class="pillar reveal">
+            <div class="pillar__num">01</div>
+            <div><h3>Segmentos público e privado</h3><p>Atendemos as mais diversas demandas com a mesma excelência operacional, do setor público ao privado.</p></div>
+          </article>
+          <article class="pillar reveal">
+            <div class="pillar__num">02</div>
+            <div><h3>Transparência</h3><p>Nosso programa de Integridade garante a transparência na gestão dos processos. Não compactuamos com nada que desvirtue nossa reputação.</p></div>
+          </article>
+          <article class="pillar reveal">
+            <div class="pillar__num">03</div>
+            <div><h3>Locais de atuação</h3><p>Presença nacional em 9 estados — AL, BA, DF, GO, MA, MG, PI, RJ e SP — com estrutura local em cada região.</p></div>
+          </article>
+          <article class="pillar reveal">
+            <div class="pillar__num">04</div>
+            <div><h3>20 anos de excelência</h3><p>Duas décadas em atividade nos mostraram que a diversidade é potencial para qualificação e crescimento em todo o território nacional.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTEGRIDADE ============ -->
+    <section class="section section--surface" id="integridade">
+      <div class="container">
+        <div class="integrity__grid">
+          <div class="reveal">
+            <span class="eyebrow-line">Integridade &amp; Compliance</span>
+            <h2 style="margin-top:18px; font-size:clamp(30px,3.4vw,44px)">Gestão responsável, do início ao fim.</h2>
+            <p style="color:var(--ink-soft); font-size:18px; margin-top:16px">
+              O nosso programa de Integridade, conduzido via Compliance, tem por objetivo
+              garantir a transparência na gestão dos nossos processos públicos e privados.
+            </p>
+            <ul class="integrity__list">
+              <li>
+                <span class="integrity__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span><strong>Conduta ética</strong>Não compactuamos com nenhum tipo de comportamento ou atividade que desvirtue nossa reputação.</span>
+              </li>
+              <li>
+                <span class="integrity__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span><strong>Transparência nos processos</strong>Mantemos a nossa credibilidade incólume em cada contrato e em cada relação comercial.</span>
+              </li>
+              <li>
+                <span class="integrity__check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+                <span><strong>Canal de denúncia</strong>Um canal seguro e confidencial para o registro de qualquer desvio de conduta.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="integrity__panel reveal">
+            <h3>Canal de denúncia</h3>
+            <p>Identificou alguma conduta em desacordo com os nossos princípios? Registre de forma segura e confidencial. Levamos cada relato a sério.</p>
+            <a href="#contato" class="btn btn-ghost-light btn-block btn-lg">Acessar canal de denúncia</a>
+            <div style="height:18px"></div>
+            <p style="margin:0; font-size:14.5px; color:rgba(255,255,255,.7)">Sua identidade é preservada. As manifestações são tratadas com sigilo pela área de Compliance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ATUAÇÃO / ESTADOS ============ -->
+    <section class="section" id="atuacao">
+      <div class="container">
+        <div class="coverage__grid">
+          <div class="reveal">
+            <span class="eyebrow-line">Locais de atuação</span>
+            <h2 style="margin-top:18px; font-size:clamp(30px,3.4vw,44px)">Presença nacional, estrutura local.</h2>
+            <p style="color:var(--ink-soft); font-size:18px; margin-top:16px">
+              Estamos presentes em 9 estados brasileiros, levando o mesmo padrão de
+              qualidade e proximidade para cada região onde atuamos.
+            </p>
+            <a href="#contato" class="btn btn-primary btn-lg" style="margin-top:24px">Fale com a unidade mais próxima</a>
+          </div>
+          <div class="states-grid reveal">
+            <div class="state-card"><div class="uf">AL</div><div class="nm">Alagoas</div></div>
+            <div class="state-card"><div class="uf">BA</div><div class="nm">Bahia</div></div>
+            <div class="state-card"><div class="uf">DF</div><div class="nm">Distrito Federal</div></div>
+            <div class="state-card"><div class="uf">GO</div><div class="nm">Goiás</div></div>
+            <div class="state-card"><div class="uf">MA</div><div class="nm">Maranhão</div></div>
+            <div class="state-card"><div class="uf">MG</div><div class="nm">Minas Gerais</div></div>
+            <div class="state-card"><div class="uf">PI</div><div class="nm">Piauí</div></div>
+            <div class="state-card"><div class="uf">RJ</div><div class="nm">Rio de Janeiro</div></div>
+            <div class="state-card"><div class="uf">SP</div><div class="nm">São Paulo</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PESSOAS / RH ============ -->
+    <section class="section people" id="pessoas">
+      <div class="container people__inner">
+        <div class="reveal">
+          <span class="overline">Pessoas</span>
+          <h2 style="margin-top:18px">Gente que faz a diferença.</h2>
+          <p>Nossa equipe é a base da excelência que entregamos. Investimos em qualificação, valorizamos a diversidade e construímos um ambiente em que cada pessoa pode crescer.</p>
+          <p>Quer fazer parte do Grupo Global? Envie o seu currículo e participe dos nossos processos seletivos.</p>
+        </div>
+        <div class="people__cards reveal">
+          <div class="people__card">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <div><h4>Recursos Humanos</h4><p>Uma gestão de pessoas próxima, que cuida do desenvolvimento e do bem-estar de cada colaborador.</p></div>
+          </div>
+          <div class="people__card">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 12 15 15"/></svg></div>
+            <div><h4>Envio de currículo</h4><p>Cadastre o seu currículo no nosso banco de talentos e fique por dentro das oportunidades.</p></div>
+          </div>
+          <div class="people__card">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+            <div><h4>Desenvolvimento</h4><p>Capacitação contínua e oportunidades reais de crescimento em todo o território nacional.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO / ORÇAMENTO ============ -->
+    <section class="section section--surface" id="contato">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__intro reveal">
+            <span class="eyebrow-line">Vamos conversar</span>
+            <h2 style="margin-top:18px">Peça já um orçamento.</h2>
+            <p>Conte-nos sobre o seu projeto. Retornaremos o quanto antes com uma proposta personalizada para a sua operação.</p>
+            <ul class="contact__list">
+              <li>
+                <span class="contact__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.74-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                <div><div class="k">Telefone</div><div class="v"><a href="tel:+551128984712">(11) 2898-4712</a></div></div>
+              </li>
+              <li>
+                <span class="contact__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+                <div><div class="k">E-mail</div><div class="v"><a href="mailto:atendimento@grupoglobal.org">atendimento@grupoglobal.org</a></div></div>
+              </li>
+              <li>
+                <span class="contact__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                <div><div class="k">Matriz</div><div class="v">Av. Sagitário, 138 · Conj. 808A · Alphaville · Barueri – SP</div></div>
+              </li>
+            </ul>
+          </div>
+
+          <form class="form reveal" id="quoteForm" novalidate>
+            <div class="field">
+              <label for="nome">Nome completo</label>
+              <input id="nome" name="nome" type="text" placeholder="Maria Silva" required>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" placeholder="maria@empresa.com.br" required>
+              </div>
+              <div class="field">
+                <label for="tel">Telefone</label>
+                <input id="tel" name="tel" type="tel" placeholder="(11) 99999-0000">
+              </div>
+            </div>
+            <div class="field">
+              <label for="assunto">Assunto</label>
+              <select id="assunto" name="assunto">
+                <option>Solicitação de orçamento</option>
+                <option>Segmento público</option>
+                <option>Segmento privado</option>
+                <option>Trabalhe conosco</option>
+                <option>Canal de denúncia</option>
+                <option>Outro assunto</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="msg">Mensagem</label>
+              <textarea id="msg" name="msg" placeholder="Conte-nos sobre o que você precisa…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-lg">Enviar mensagem</button>
+            <div class="form__ok" id="formOk">Obrigado por entrar em contato. Retornaremos assim que possível.</div>
+            <p class="form__note">Ao enviar, você concorda com o tratamento dos seus dados conforme a nossa Política de Privacidade.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img class="footer__logo" src="assets/grupo-global-logo-white.png" alt="Grupo Global Serviços">
+          <p>Prezando pela excelência há mais de 20 anos. Serviços para os segmentos público e privado, com presença nacional.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.25 8h4.5v13H.25V8zM8 8h4.3v1.78h.06c.6-1.13 2.07-2.32 4.26-2.32 4.56 0 5.4 3 5.4 6.9V21h-4.5v-5.84c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1V21H8V8z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="mailto:atendimento@grupoglobal.org" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h5>Institucional</h5>
+          <ul>
+            <li><a href="#sobre">Sobre nós</a></li>
+            <li><a href="#sobre">Missão, visão e valores</a></li>
+            <li><a href="#integridade">Integridade</a></li>
+            <li><a href="#integridade">Canal de denúncia</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Negócios</h5>
+          <ul>
+            <li><a href="#negocios">Nossos serviços</a></li>
+            <li><a href="#atuacao">Locais de atuação</a></li>
+            <li><a href="#pessoas">Pessoas</a></li>
+            <li><a href="#contato">Solicite uma proposta</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Contato</h5>
+          <p>
+            Av. Sagitário, 138 · Conj. 808A<br>
+            Sítio Tamboré Alphaville<br>
+            CEP 06.473-073 · Barueri – SP<br><br>
+            <a href="tel:+551128984712">(11) 2898-4712</a><br>
+            <a href="mailto:atendimento@grupoglobal.org">atendimento@grupoglobal.org</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>CNPJ 09.439.320/0001-17 · Global Serviços &amp; Comércio LTDA</span>
+        <span>© <span id="year"></span> Grupo Global Serviços. Todos os direitos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Ano
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Header sticky shadow + shrink
+    var header = document.getElementById('header');
+    var onScroll = function () {
+      if (window.scrollY > 8) header.classList.add('is-stuck');
+      else header.classList.remove('is-stuck');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // Mobile drawer
+    var burger = document.getElementById('burger');
+    var drawer = document.getElementById('drawer');
+    var backdrop = document.getElementById('drawerBackdrop');
+    var closeBtn = document.getElementById('drawerClose');
+    function openDrawer() { drawer.classList.add('open'); backdrop.classList.add('open'); burger.setAttribute('aria-expanded', 'true'); drawer.setAttribute('aria-hidden', 'false'); }
+    function closeDrawer() { drawer.classList.remove('open'); backdrop.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); drawer.setAttribute('aria-hidden', 'true'); }
+    burger.addEventListener('click', openDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+    drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeDrawer); });
+
+    // Reveal on scroll (leve)
+    var revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(function (el) { io.observe(el); });
+    } else {
+      revealEls.forEach(function (el) { el.classList.add('in'); });
+    }
+
+    // Form
+    var form = document.getElementById('quoteForm');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.nome.value.trim() || !form.email.value.trim()) {
+        form.reportValidity && form.reportValidity();
+        return;
+      }
+      document.getElementById('formOk').classList.add('show');
+      form.reset();
+      setTimeout(function () { document.getElementById('formOk').classList.remove('show'); }, 4000);
+    });
+
+    // Active nav highlight on scroll
+    var sections = ['topo', 'sobre', 'negocios', 'integridade', 'pessoas', 'contato'];
+    var navLinks = document.querySelectorAll('.mainnav__link');
+    var spy = function () {
+      var pos = window.scrollY + 160;
+      var current = 'topo';
+      sections.forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el && el.offsetTop <= pos) current = id;
+      });
+      navLinks.forEach(function (l) {
+        var href = l.getAttribute('href');
+        l.classList.toggle('active', href === '#' + current);
+      });
+    };
+    window.addEventListener('scroll', spy, { passive: true });
+    spy();
+  </script>
+
+</body>
+</html>

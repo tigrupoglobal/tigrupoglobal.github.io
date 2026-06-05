@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 130" width="520" height="130" role="img" aria-label="Grupo Global">
+  <defs>
+    <linearGradient id="gg-mark-dark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#427BCA"></stop>
+      <stop offset="1" stop-color="#0B1B33"></stop>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0,8)">
+    <circle cx="58" cy="58" r="52" fill="none" stroke="url(#gg-mark-dark)" stroke-width="14"></circle>
+    <path d="M58 58 L110 58" stroke="url(#gg-mark-dark)" stroke-width="14" stroke-linecap="square"></path>
+  </g>
+  <g fill="#0B1B33" font-family="Montserrat, &#39;Helvetica Neue&#39;, Arial, sans-serif">
+    <text x="138" y="62" font-size="36" font-weight="800" letter-spacing="-1.2">Grupo Global</text>
+    <text x="138" y="98" font-size="16" font-weight="300" letter-spacing="6" fill="#427BCA">SERVIÇOS</text>
+  </g>
+</svg>
